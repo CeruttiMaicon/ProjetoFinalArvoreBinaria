@@ -4,27 +4,33 @@ public class FilaDinamica {
 
 	private Elemento cauda;
 	private Elemento cabeca;
+	public int contador;
 
 
 	public FilaDinamica() {
 		cabeca = cauda = null;
 	}
 
-	public void add (Object valor) throws Exception{
+	public int add (Object valor) throws Exception{
+		contador++;
 		System.out.println("Adicionando " + valor);
 		Elemento e = new Elemento(valor);
 		if (cauda != null) {
+			contador++;
 			cauda.setProximo(e);
 		}
 		cauda = e;
 		if (cabeca == null) {
+			contador++;
 			cabeca = e;
 		}
+		contador++;
+		return contador;
 	}
 
 	public Object remove() throws Exception {
 		if (this.isEmpty()) throw new Exception("Fila vazia");
-		Object o = cabeca.getValor(); //1º Elemento da fila
+		Object o = cabeca.getValor(); //1 Elemento da fila
 		cabeca = cabeca.getProximo();
 		if (cabeca == null)
 			cauda = null;
@@ -54,11 +60,14 @@ public class FilaDinamica {
 		}
 	}
 
-	public void list() {
+	public int list() {
+		contador++;
 		Elemento e = cabeca;
 		while (e != null){
+			contador++;
 			System.out.println("Listando " + e.getValor());
 			e = e.getProximo();
 		}
+		return contador;
 	}
 }

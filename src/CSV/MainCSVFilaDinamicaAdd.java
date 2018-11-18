@@ -2,16 +2,22 @@ package CSV;
 
 import java.io.FileWriter;
 import java.io.IOException;
-public class MainCSV {
 
-    public static void main(String[] args) {
+import FilaDinamica.FilaDinamica;
+
+public class MainCSVFilaDinamicaAdd {
+	public static void main(String[] args) throws Exception {
 
         // Fila com os valores Crescentes
         try {
             Popula p = new Popula();
             // Aqui definimos o local de criacao do arquivo CSV, no meu Ubuntu coloquei esta
             // rota
-            FileWriter writer = new FileWriter("/home/dev3/Documentos/arrayInsertionSort.csv");
+            FileWriter writer = new FileWriter("/home/dev3/Documentos/arrayFilaDinamica.csv");
+            
+            FilaDinamica filaDinamica1 = new FilaDinamica();
+            FilaDinamica filaDinamica2 = new FilaDinamica();
+//            FilaDinamica filaDinamica3 = new FilaDinamica();
 
             // Faz o cabeçalho do arquivo CSV
 
@@ -30,14 +36,12 @@ public class MainCSV {
                 p.decrescente(decrescenteVar);
                 p.aleatorio(aleatorioVar);
 
-                InsertionSort insertionsort1 = new InsertionSort();
-                InsertionSort insertionsort2 = new InsertionSort();
-                InsertionSort insertionsort3 = new InsertionSort();
+               
 
                 // Escreve no arquivo CSV
-                writer.append(insertionsort1.recebeVetor(crescenteVar) + ",");
-                writer.append(insertionsort2.recebeVetor(decrescenteVar) + ",");
-                writer.append(insertionsort3.recebeVetor(aleatorioVar) + ",");
+                writer.append(filaDinamica1.add(crescenteVar[n-1]) + ",");
+                writer.append(filaDinamica2.add(decrescenteVar[n-1]) + ",");
+//                writer.append(filaDinamica3.add(aleatorioVar) + ",");
                 writer.append('\n');
 
                 // Criando CSV com o array

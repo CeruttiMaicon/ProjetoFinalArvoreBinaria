@@ -11,7 +11,7 @@ public class Popula {
 	}
 	
 	public int[] decrescente (int[] valor)  {
-		int gol = 999;
+		int gol = 99;
 		for (int i = 0; i < valor.length; i++){
 			valor[i] = gol - i;
 		}
@@ -21,7 +21,7 @@ public class Popula {
 	public int[] aleatorio (int[] valor)  {
 		for (int i = 0; i < valor.length; i++) {
 			Random aleatorio = new Random();
-			valor[i] = aleatorio.nextInt(100);
+			valor[i] = aleatorio.nextInt(10);
 		}
 		return valor;
 	}
