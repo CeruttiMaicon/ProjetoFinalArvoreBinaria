@@ -21,9 +21,10 @@ public class MainCSVFilaDinamicaAdd {
 
             // Faz o cabeçalho do arquivo CSV
 
-            writer.append("InsertionSort-Cresc,");
-            writer.append("InsertionSort-Decresc,");
-            writer.append("InsertionSort-Aleatorio,");
+            writer.append("FilaDinamica-Cresc-Add,");
+            writer.append("FilaDinamica-Decresc-Add,");
+            writer.append("FilaDinamica-Cresc-List,");
+            writer.append("FilaDinamica-Decresc-List,");
 
             writer.append('\n');
             for (int n = 1; n <= 100; n++) {
@@ -41,6 +42,8 @@ public class MainCSVFilaDinamicaAdd {
                 // Escreve no arquivo CSV
                 writer.append(filaDinamica1.add(crescenteVar[n-1]) + ",");
                 writer.append(filaDinamica2.add(decrescenteVar[n-1]) + ",");
+                writer.append(filaDinamica1.list() + ",");
+                writer.append(filaDinamica2.list() + ",");
 //                writer.append(filaDinamica3.add(aleatorioVar) + ",");
                 writer.append('\n');
 
