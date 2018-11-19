@@ -190,4 +190,29 @@ public class Arvore<T extends Comparable<T>> {
 			}
 		}
 	}
+	
+	//Copiado esta estrutura da arvore do projeto do allan. Implementar os contadores e fazer retornar o numero de interações
+	public No<T> localizar(T valor) {
+		return this.localizar(this.raiz, valor);
+	}
+
+	private No<T> localizar(No<T> no, T valor) {
+		if (no != null) {
+			if (no.valor.equals(valor)) {
+				return no;
+			}
+    
+			No<T> aux = localizar(no.esquerda, valor);
+			if (aux != null) {
+				return aux;
+			}
+			
+			aux = localizar(no.direita, valor);
+			if (aux != null) {
+				return aux;
+			}
+  		}
+		
+		return null;
+	}
 }
