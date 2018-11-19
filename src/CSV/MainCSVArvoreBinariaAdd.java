@@ -19,9 +19,10 @@ public class MainCSVArvoreBinariaAdd {
 
             // Faz o cabeçalho do arquivo CSV
 
-            writer.append("ArvoreBinaria-Cresc,");
-            writer.append("ArvoreBinaria-Decresc,");
-            writer.append("ArvoreBinaria-Aleatorio,");
+            writer.append("ArvoreBinaria-Cresc-Add,");
+            writer.append("ArvoreBinaria-Decresc-Add,");
+            writer.append("ArvoreBinaria-Cresc-Procura-MelhorCaso,");
+            writer.append("ArvoreBinaria-Decresc-Procura-PiorCaso,");
 
             writer.append('\n');
             
@@ -46,6 +47,8 @@ public class MainCSVArvoreBinariaAdd {
                 
             	writer.append(arvore1.adiciona(crescenteVar[n-1]) + ",");
             	writer.append(arvore2.adiciona(decrescenteVar[n-1]) + ",");
+            	writer.append(arvore1.localizar(1) + ",");
+            	writer.append(arvore2.localizar(1) + ",");
             	
             	//Mostrar para o Professor Allan
             	// A arvore nao consegue funcionar com valores adicionados aleatoriamente
