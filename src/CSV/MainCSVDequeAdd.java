@@ -21,9 +21,9 @@ public class MainCSVDequeAdd {
 
             // Faz o cabeçalho do arquivo CSV
 
-            writer.append("Deque-Cresc-Add,");
+            //writer.append("Deque-Cresc-Add,");
             writer.append("Deque-Decresc-Add,");
-            writer.append("Deque-Cresc-Procura-MelhorCaso,");
+            //writer.append("Deque-Cresc-Procura-MelhorCaso,");
             writer.append("Deque-Decresc-Procura-PiorCaso,");
 
             writer.append('\n');
@@ -40,9 +40,9 @@ public class MainCSVDequeAdd {
                
 
                 // Escreve no arquivo CSV
-                writer.append(deque1.add(crescenteVar[n-1]) + ",");
+                //writer.append(deque1.add(crescenteVar[n-1]) + ",");
                 writer.append(deque2.add(decrescenteVar[n-1]) + ",");
-                writer.append(deque1.procura(1) + ",");
+                //writer.append(deque1.procura(1) + ",");
                 writer.append(deque2.procura(1) + ",");
 
                 writer.append('\n');

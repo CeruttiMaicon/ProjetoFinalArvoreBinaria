@@ -19,9 +19,9 @@ public class MainCSVArvoreBinariaAdd {
 
             // Faz o cabeçalho do arquivo CSV
 
-            writer.append("ArvoreBinaria-Cresc-Add,");
+//            writer.append("ArvoreBinaria-Cresc-Add,");
             writer.append("ArvoreBinaria-Decresc-Add,");
-            writer.append("ArvoreBinaria-Cresc-Procura-MelhorCaso,");
+//            writer.append("ArvoreBinaria-Cresc-Procura-MelhorCaso,");
             writer.append("ArvoreBinaria-Decresc-Procura-PiorCaso,");
 
             writer.append('\n');
@@ -29,25 +29,25 @@ public class MainCSVArvoreBinariaAdd {
           //Criando as arvores
             Arvore<Integer> arvore1 = new Arvore<>();
             Arvore<Integer> arvore2 = new Arvore<>();
-            Arvore<Integer> arvore3 = new Arvore<>();
+//            Arvore<Integer> arvore3 = new Arvore<>();
             
             for (int n = 1; n <= 100; n++) {
                 int[] crescenteVar = new int[n];
                 int[] decrescenteVar = new int[n];
-                int[] aleatorioVar = new int[n];
+//                int[] aleatorioVar = new int[n];
 
                 // Adicionando os elementos na filaCrescentes
                 p.crescente(crescenteVar);
                 p.decrescente(decrescenteVar);
-                p.aleatorio(aleatorioVar);
+//                p.aleatorio(aleatorioVar);
 
                 
 
                 // Escreve no arquivo CSV com a quantidade de interações feitas para executar o algoritmo
                 
-            	writer.append(arvore1.adiciona(crescenteVar[n-1]) + ",");
+//            	writer.append(arvore1.adiciona(crescenteVar[n-1]) + ",");
             	writer.append(arvore2.adiciona(decrescenteVar[n-1]) + ",");
-            	writer.append(arvore1.localizar(1) + ",");
+//            	writer.append(arvore1.localizar(1) + ",");
             	writer.append(arvore2.localizar(1) + ",");
             	
             	//Mostrar para o Professor Allan
